@@ -1,0 +1,246 @@
+:root {
+	--primary-color: #f50886;
+}
+
+.material-symbols-outlined {
+	font-variation-settings:
+		'FILL' 0,
+		'wght' 200,
+		'GRAD' 0,
+		'opsz' 20
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	user-select: none;
+
+
+
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0;
+	font-size: 28px;
+	background-color: #000000;
+}
+
+#canvaBoard {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+
+button {
+	padding: 8px 18px;
+	background-color: blueviolet;
+	color: white;
+	border: 0;
+	/* position: absolute; */
+	bottom: 40px;
+	right: 40px;
+	z-index: 9;
+	cursor: pointer;
+}
+
+.toolkit-container {
+	position: fixed;
+	width: 100%;
+	bottom: 20px;
+	z-index: 100;
+}
+
+.toolkit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tools {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(15px);
+	min-width: 300px;
+	padding: 16px 40px;
+	border-radius: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+}
+
+.tool {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	font-size: 12px;
+	border-radius: 50%;
+	border: 1px solid #a3a3a3;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	cursor: pointer;
+	transition: 0.3s;
+	overflow: hidden;
+}
+
+#toolColor {
+	background-color: green;
+	position: relative;
+}
+
+#toolColor input {
+	padding: 0;
+	border: 0;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+.tool.active {
+	border-color: var(--primary-color);
+	color: var(--primary-color);
+}
+
+.tool:not(.active):hover {
+	color: var(--primary-color);
+}
+
+
+/* CSS Grid */
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.text {
+	/* display: none; */
+}
+
+.menu {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 12px;
+}
+
+.item {
+	background-color: #161515;
+	color: #d6d6d6;
+	font-size: 15px;
+	text-align: center;
+	padding: 16px;
+	border-radius: 12px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+.overlay {
+	/* background-image: url('https://img.freepik.com/free-vector/young-woman-wearing-coat-hat-scarf-riding-bicycle-park-fall-foliage-from-wind-is-blowing-autumn-season-cartoon-character-vector-illustration_1150-52716.jpg?t=st=1722097189~exp=1722100789~hmac=b90c8a9ab48e8b7c25b03af18dfb962c070767af0a1cc5d9dcf6145d4364b9cb&w=740'); */
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+	background-color: transparent;
+	width: 100%;
+	height: 100vh;
+	z-index: 999;
+}
+
+
+.login-form {
+	background-color: rgba(255, 255, 255, 0.25);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid #fff;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+	border-right: 1px solid rgba(255, 255, 255, 0.25);
+	border-radius: 20px;
+	box-shadow: 0 25px 50px rgba(255, 255, 255, 0.1);
+	padding: 4rem;
+	width: 40rem;
+}
+
+.login-form h2 {
+	color: #c2c1c2;
+	font-size: 3.8rem;
+	font-weight: 600;
+	margin-bottom: 2.5rem;
+	text-align: center;
+}
+
+.input-box input {
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+	color: #8f2c24;
+	font-size: 1.6rem;
+	margin-bottom: 3rem;
+	padding: 1.5rem 2rem;
+	outline: none;
+	width: 100%;
+}
+
+.login-form .input-box ::placeholder {
+	color: #8e0b6d;
+}
+
+.input-box .login-btn {
+	background: #8e0b6d;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+
+.input-box .login-btn:hover {
+	background: #b7544c;
+}
+
+/* Media Queries  */
+@media (width <=475px) {
+	html {
+		font-size: 56.25%;
+	}
+
+	.input-box input {
+		font-size: 1.8rem;
+	}
+}
+
+@media (width <=380px) {
+	html {
+		font-size: 50%;
+	}
+
+	.input-box input {
+		font-size: 2rem;
+	}
+}
+
+@media (width <=360px) {
+	html {
+		font-size: 43.75%;
+	}
+
+	.input-box input {
+		font-size: 2rem;
+	}
+}
